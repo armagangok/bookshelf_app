@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'app/home/homepage.dart';
 import 'init_app.dart';
+import './theme/theme.dart';
 
 void main() async {
   await initApp();
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Library',
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: theme(),
       home: const HomePage(),
     );
   }
