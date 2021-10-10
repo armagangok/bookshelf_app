@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:library_app/app/screens/add_book_screen/modal_bottom_sheet.dart';
 
-Widget bottomApBar(BuildContext context) {
+Widget bottomApBar(
+  BuildContext context,
+  bookName,
+  authorName,
+  edition,
+  printingDate,
+) {
   return BottomAppBar(
     color: Theme.of(context).primaryColor,
     shape: const CircularNotchedRectangle(),
@@ -31,7 +38,15 @@ Widget bottomApBar(BuildContext context) {
           IconButton(
             iconSize: 30.0,
             icon: const Icon(Icons.add),
-            onPressed: () {},
+            onPressed: () {
+              bottomSheet(
+                context,
+                bookName,
+                authorName,
+                edition,
+                printingDate,
+              );
+            },
           ),
         ],
       ),

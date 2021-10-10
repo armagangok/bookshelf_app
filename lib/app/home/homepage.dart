@@ -8,9 +8,19 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController bookName = TextEditingController();
+    final TextEditingController authorName = TextEditingController();
+    final TextEditingController edition = TextEditingController();
+    final TextEditingController printingDate = TextEditingController();
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      bottomNavigationBar: bottomApBar(context),
+      bottomNavigationBar: bottomApBar(
+        context,
+        bookName,
+        authorName,
+        edition,
+        printingDate,
+      ),
       appBar: appBar("My Library"),
       body: Center(
         child: Column(

@@ -6,25 +6,26 @@ part of 'hive_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class HiveModelAdapter extends TypeAdapter<HiveModel> {
+class BookModelAdapter extends TypeAdapter<BookModel> {
   @override
   final int typeId = 1;
 
   @override
-  HiveModel read(BinaryReader reader) {
+  BookModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return HiveModel()
-      ..bookName = fields[0] as String
-      ..authorName = fields[1] as String
-      ..edition = fields[2] as int
-      ..printingDate = fields[3] as int;
+    return BookModel(
+      bookName: fields[0] as String,
+      authorName: fields[1] as String?,
+      edition: fields[2] as int?,
+      printingDate: fields[3] as int?,
+    );
   }
 
   @override
-  void write(BinaryWriter writer, HiveModel obj) {
+  void write(BinaryWriter writer, BookModel obj) {
     writer
       ..writeByte(4)
       ..writeByte(0)
@@ -43,7 +44,7 @@ class HiveModelAdapter extends TypeAdapter<HiveModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is HiveModelAdapter &&
+      other is BookModelAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

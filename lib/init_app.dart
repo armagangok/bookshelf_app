@@ -8,5 +8,5 @@ Future<void> initApp() async {
   WidgetsFlutterBinding.ensureInitialized();
   final directory = await path_provider.getApplicationDocumentsDirectory();
   Hive.initFlutter(directory.path);
-  Hive.registerAdapter(HiveModelAdapter());
+  Hive.registerAdapter(BookModelAdapter());
 }
