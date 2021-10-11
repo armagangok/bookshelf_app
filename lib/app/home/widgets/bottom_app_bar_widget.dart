@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/app/screens/add_book_screen/add_book_screen.dart';
+import 'package:library_app/app/screens/add_books_screen/add_book_screen.dart';
+import '../../screens/list_all_book_screen/all_books_screen.dart';
 
 class BottomAppBarWidget extends StatelessWidget {
   const BottomAppBarWidget({Key? key}) : super(key: key);
@@ -27,7 +28,14 @@ class BottomAppBarWidget extends StatelessWidget {
             IconButton(
               iconSize: 30.0,
               icon: const Icon(Icons.list),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AllBooksPage(),
+                  ),
+                );
+              },
             ),
             const VerticalDivider(
               width: 2,

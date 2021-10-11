@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'app/home/homepage.dart';
-import 'init_app.dart';
+import './app/home/homepage.dart';
+import './init_app.dart';
 import './ui/theme/theme.dart';
 
 void main() async {
