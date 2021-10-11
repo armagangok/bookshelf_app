@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/app/components/appbar.dart';
-import '../../components/text_form_field.dart';
-import '../../models/models.dart';
+import 'package:library_app/ui/widgets/appbar.dart';
+import '../../../ui/widgets/text_form_field.dart';
+import '../../../models/models.dart';
 import 'components/add_book_button.dart';
 
 class AddBookScreen extends StatelessWidget {
@@ -12,7 +12,7 @@ class AddBookScreen extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
-        appBar: appBar(""),
+        appBar: const AppBarWidget(text: ""),
         body: const Body(),
       ),
     );
