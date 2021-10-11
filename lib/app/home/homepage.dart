@@ -1,35 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/app/common/appbar.dart';
+import 'package:library_app/app/components/appbar.dart';
 import './widgets/bottom_app_bar_widget.dart';
-import '../common/appbar.dart';
+import '../components/appbar.dart';
+import 'widgets/body_widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController bookName = TextEditingController();
-    final TextEditingController authorName = TextEditingController();
-    final TextEditingController edition = TextEditingController();
-    final TextEditingController printingDate = TextEditingController();
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      bottomNavigationBar: bottomApBar(
-        context,
-        bookName,
-        authorName,
-        edition,
-        printingDate,
-      ),
-      appBar: appBar("My Library"),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text('Search Results'),
-          ],
-        ),
-      ),
+      appBar: const AppBarWidget(text: ""),
+      body: const HomePaageBodyWidget(),
+      bottomNavigationBar: const BottomAppBarWidget(),
     );
   }
 }
