@@ -7,6 +7,8 @@ import 'database/hive_model.dart';
 Future<void> initApp() async {
   WidgetsFlutterBinding.ensureInitialized();
   final directory = await path_provider.getApplicationDocumentsDirectory();
-  Hive.initFlutter(directory.path);
+  await Hive.initFlutter(directory.path);
   Hive.registerAdapter(BookModelAdapter());
+
+  await Hive.openBox("book");
 }

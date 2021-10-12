@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import './app/home/homepage.dart';
 import './init_app.dart';
 import './ui/theme/theme.dart';
+import 'app/screens/home/homepage.dart';
 
-void main() async {
-  await initApp();
+void main() {
+  initApp();
   runApp(const MyApp());
 }
 

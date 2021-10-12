@@ -35,8 +35,8 @@ class ItemWidget extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Book Name: " + data.bookName),
-                              Text("AuthorName: " + data.authorName),
+                              Text("Book Name: ${data.bookName}"),
+                              Text("AuthorName: ${data.authorName}"),
                             ],
                           ),
                         ),
@@ -47,8 +47,8 @@ class ItemWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text("Edition: " + data.edition.toString()),
-                            Text("Print Date: " + data.printingDate.toString()),
+                            Text("Edition: ${data.edition.toString()}"),
+                            Text("Print Date: ${data.printingDate.toString()}"),
                           ],
                         ),
                       ),

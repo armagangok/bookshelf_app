@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../database/hive_helper.dart';
 import '../../../../database/hive_model.dart';
-import '../../../../models/models.dart';
+import 'text_controllers.dart';
 
 class AddBookButton extends StatelessWidget {
   const AddBookButton({Key? key}) : super(key: key);
@@ -9,23 +9,13 @@ class AddBookButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () async {
-        BookModel book = initBook();
+      onPressed: () {
+        BookModel book = initBook(cont);
         addBook(book);
-        var data = await getAllbook();
-        for (var item in data) {
-          print(item.bookName +
-              " " +
-              item.authorName +
-              " " +
-              item.printingDate.toString() +
-              " " +
-              item.edition.toString());
-        }
-        bookName.clear();
-        authorName.clear();
-        edition.clear();
-        printingDate.clear();
+        cont.bookName.clear();
+        cont.authorName.clear();
+        cont.edition.clear();
+        cont.printingDate.clear();
       },
       child: Text(
         "save",
@@ -38,14 +28,14 @@ class AddBookButton extends StatelessWidget {
   }
 }
 
-BookModel initBook() {
+BookModel initBook(cont) {
   late final BookModel book;
 
   book = BookModel(
-    bookName: bookName.text,
-    authorName: authorName.text,
-    edition: int.tryParse(edition.text),
-    printingDate: int.tryParse(printingDate.text),
+    bookName: cont.bookName.text,
+    authorName: cont.authorName.text,
+    edition: int.tryParse(cont.edition.text),
+    printingDate: int.tryParse(cont.printingDate.text),
   );
   return book;
 }

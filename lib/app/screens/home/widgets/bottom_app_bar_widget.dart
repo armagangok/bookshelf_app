@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:library_app/app/screens/add_books_screen/add_book_screen.dart';
-import '../../screens/list_all_book_screen/all_books_screen.dart';
+import 'package:library_app/app/screens/list_all_book_screen/all_books_screen.dart';
 
 class BottomAppBarWidget extends StatelessWidget {
   const BottomAppBarWidget({Key? key}) : super(key: key);
