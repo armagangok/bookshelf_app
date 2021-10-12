@@ -19,11 +19,11 @@ class ItemWidget extends StatelessWidget {
             itemBuilder: (context, index) {
               var data = box.getAt(index);
               return Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  const Divider(thickness: 0.4, color: Colors.black),
                   Slidable(
                     actionPane: const SlidableDrawerActionPane(),
-                    actionExtentRatio: 0.25,
+                    actionExtentRatio: 0.20,
                     secondaryActions: <Widget>[
                       IconSlideActionWidget(index: index),
                     ],

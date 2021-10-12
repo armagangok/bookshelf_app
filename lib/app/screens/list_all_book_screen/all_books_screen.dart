@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:library_app/ui/widgets/appbar.dart';
+import 'package:library_app/app/common/appbar.dart';
 import 'widgets/item.dart';
 
 class AllBooksPage extends StatelessWidget {

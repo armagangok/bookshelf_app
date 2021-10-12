@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-final TextController cont = TextController();
-
 class TextController {
-  final TextEditingController bookName = TextEditingController();
-  final TextEditingController authorName = TextEditingController();
-  final TextEditingController edition = TextEditingController();
-  final TextEditingController printingDate = TextEditingController();
+  final TextEditingController _bookName = TextEditingController();
+  final TextEditingController _authorName = TextEditingController();
+  final TextEditingController _edition = TextEditingController();
+  final TextEditingController _printingDate = TextEditingController();
+
+  get getBookName => _bookName;
+  get getAuthorName => _authorName;
+  get getEdition => _edition;
+  get getPrintingDate => _printingDate;
 }
+
+TextController cont = TextController();

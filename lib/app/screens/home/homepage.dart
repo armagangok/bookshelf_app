@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/ui/widgets/appbar.dart';
+import 'package:library_app/app/common/appbar.dart';
 import './widgets/bottom_app_bar_widget.dart';
 import 'widgets/body_widgets.dart';
 

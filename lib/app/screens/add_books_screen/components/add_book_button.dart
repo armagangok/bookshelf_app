@@ -12,10 +12,10 @@ class AddBookButton extends StatelessWidget {
       onPressed: () {
         BookModel book = initBook(cont);
         addBook(book);
-        cont.bookName.clear();
-        cont.authorName.clear();
-        cont.edition.clear();
-        cont.printingDate.clear();
+        cont.getBookName.clear();
+        cont.getAuthorName.clear();
+        cont.getEdition.clear();
+        cont.getPrintingDate.clear();
       },
       child: Text(
         "save",
@@ -32,10 +32,10 @@ BookModel initBook(cont) {
   late final BookModel book;
 
   book = BookModel(
-    bookName: cont.bookName.text,
-    authorName: cont.authorName.text,
-    edition: int.tryParse(cont.edition.text),
-    printingDate: int.tryParse(cont.printingDate.text),
+    bookName: cont.getBookName.text,
+    authorName: cont.getAuthorName.text,
+    edition: int.tryParse(cont.getEdition.text),
+    printingDate: int.tryParse(cont.getPrintingDate.text),
   );
   return book;
 }

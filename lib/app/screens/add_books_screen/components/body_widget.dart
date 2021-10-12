@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/ui/widgets/text_form_field.dart';
+import 'package:library_app/app/common/text_form_field.dart';
 import 'add_book_button.dart';
 import 'text_controllers.dart';
 
 class BodyWidget extends StatelessWidget {
-  
   const BodyWidget({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -32,25 +30,25 @@ class BodyWidget extends StatelessWidget {
                         context: context,
                         labelText: "Book name",
                         type: TextInputType.emailAddress,
-                        controller: cont.bookName,
+                        controller: cont.getBookName,
                       ),
                       TextFormFieldWidget(
                         context: context,
                         labelText: "Author name",
                         type: TextInputType.emailAddress,
-                        controller: cont.authorName,
+                        controller: cont.getAuthorName,
                       ),
                       TextFormFieldWidget(
                         context: context,
                         labelText: "Edition",
                         type: TextInputType.number,
-                        controller: cont.edition,
+                        controller: cont.getEdition,
                       ),
                       TextFormFieldWidget(
                         context: context,
                         labelText: "Printing date",
                         type: TextInputType.number,
-                        controller: cont.printingDate,
+                        controller: cont.getPrintingDate,
                       ),
                       const AddBookButton(),
                     ],
