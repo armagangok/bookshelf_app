@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/app/screens/add_books_screen/add_book_screen.dart';
-import 'package:library_app/app/screens/list_all_book_screen/all_books_screen.dart';
+import 'package:library_app/app/screens/add_book_screen/add_book_screen.dart';
+import 'package:library_app/app/screens/search_screen/search_screen.dart';
 
 class BottomAppBarWidget extends StatelessWidget {
   const BottomAppBarWidget({Key? key}) : super(key: key);
@@ -17,32 +17,20 @@ class BottomAppBarWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             IconButton(
-              iconSize: 30.0,
-              icon: const Icon(Icons.search),
-              onPressed: () {},
-            ),
-            const VerticalDivider(
-              width: 2,
-              color: Colors.black,
-            ),
-            IconButton(
-              iconSize: 30.0,
-              icon: const Icon(Icons.list),
+              icon: const Icon(
+                Icons.search,
+                size: 40,
+              ),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const AllBooksPage(),
-                  ),
+                showSearch(
+                  context: context,
+                  delegate: HomeScreenBodyWidget(),
                 );
               },
             ),
-            const VerticalDivider(
-              width: 2,
-              color: Colors.black,
-            ),
+            const VerticalDivider(width: 2, color: Colors.black),
             IconButton(
-              iconSize: 30.0,
+              iconSize: 40.0,
               icon: const Icon(Icons.add),
               onPressed: () {
                 Navigator.push(

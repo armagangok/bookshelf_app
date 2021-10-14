@@ -4,7 +4,7 @@ part 'hive_model.g.dart';
 @HiveType(typeId: 1)
 class BookModel {
   @HiveField(0)
-  final String bookName;
+  final String? bookName;
 
   @HiveField(1)
   final String? authorName;
@@ -16,7 +16,7 @@ class BookModel {
   final int? printingDate;
 
   BookModel({
-    required this.bookName,
+    this.bookName,
     this.authorName,
     this.edition,
     this.printingDate,

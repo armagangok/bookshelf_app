@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:library_app/app/common/appbar.dart';
 import './widgets/bottom_app_bar_widget.dart';
-import 'widgets/body_widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,8 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: const AppBarWidget(text: ""),
-      body: const HomePaageBodyWidget(),
+      appBar: const AppBarWidget(text: "Bookshelf"),
       bottomNavigationBar: const BottomAppBarWidget(),
     );
   }

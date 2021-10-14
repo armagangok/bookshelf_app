@@ -10,5 +10,5 @@ Future<void> initApp() async {
   await Hive.initFlutter(directory.path);
   Hive.registerAdapter(BookModelAdapter());
 
-  await Hive.openBox("book");
+  await Hive.openBox<BookModel>("book");
 }
